@@ -1,0 +1,34 @@
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "txn-classifier"
+version = "0.1.0"
+description = "Bank transaction classification using machine learning"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "scikit-learn>=1.3",
+    "matplotlib>=3.7",
+    "joblib>=1.3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+explainability = ["shap>=0.44"]
+
+[tool.setuptools]
+package-dir = {"" = "../.."}
+
+[tool.setuptools.packages.find]
+where = ["../.."]
+include = ["ai_ml", "ai_ml.txn_classifier"]
+namespaces = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]

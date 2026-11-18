@@ -1,0 +1,9 @@
+config,macro_f1_mean,macro_f1_std,accuracy_mean,chosen
+logreg | class_weight | text+type | C=0.3,0.9459,0.0107,0.9585,True
+logreg | class_weight | text+type | C=1.0,0.9451,0.011,0.9581,False
+logreg | class_weight | text+type | C=10.0,0.9343,0.0097,0.9523,False
+logreg | none | text+type | C=0.3,0.9459,0.0107,0.9585,False
+logreg | oversample | text+type | C=10.0,0.9212,0.021,0.9429,False
+linear_svc | class_weight | text+type | C=1.0,0.9459,0.0107,0.9585,False
+complement_nb | none | text+type | C=10.0,0.9218,0.0095,0.9351,False
+hgb | class_weight | text+type+amount+date | C=10.0,0.9394,0.0062,0.9546,False
