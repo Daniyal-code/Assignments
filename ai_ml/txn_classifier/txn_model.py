@@ -137,7 +137,8 @@ def drop_suspect_rows(train: pd.DataFrame, min_signals: int = 2, seed: int = RAN
     Remove training rows that >= `min_signals` label-noise checks flag (see txn_pipeline.label_issue_report).
     Flags are computed from the TRAINING rows only, so no validation/test information is used.
     """
-    import txn_pipeline as tp
+    # import txn_pipeline as tp
+    from ai_ml.txn_classifier import txn_pipeline as tp
     report, _, _ = tp.label_issue_report(train, seed=seed)
     return train.loc[report.index[report["n_signals"] < min_signals]]
 
