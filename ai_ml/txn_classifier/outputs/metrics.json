@@ -1,0 +1,14 @@
+{
+  "config": "logreg | class_weight | text+type | C=0.3",
+  "n_train": 2555,
+  "n_test": 645,
+  "accuracy": 0.9658914728682171,
+  "macro_f1": 0.9597138986421807,
+  "macro_f1_ci95": [
+    0.9411108212339278,
+    0.9749096864129743
+  ],
+  "errors": 22,
+  "errors_on_likely_noisy_labels": 22,
+  "accuracy_excluding_likely_noisy": 1.0
+}
