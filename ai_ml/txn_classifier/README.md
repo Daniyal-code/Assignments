@@ -46,3 +46,4 @@ fitted inside training folds; no id/account features; automated `leakage_audit`;
 ## Notes
 * `shap` could not be installed in the sandbox where this was built, so `txn_model.LinearExplainer` implements the **exact** linear-model SHAP values
   (`coef * (x - mean)`; additivity unit-tested). If `shap` is installed, the notebook cross-checks against it.
+* Every data in the report comes from running the code in this repo (`train.py`, notebooks, tests).
